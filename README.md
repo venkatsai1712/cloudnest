@@ -2,18 +2,7 @@
 
 **A secure, full-stack cloud file storage and sharing platform**
 
-[![Java](https://img.shields.io/badge/Java-21-orange?logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0.6-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
-[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-4169E1?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![MinIO](https://img.shields.io/badge/MinIO-S3%20Compatible-C72E49?logo=minio&logoColor=white)](https://min.io/)
-[![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
-
 CloudNest is a cloud storage application that enables users to securely upload, organize, download, and share files through a modern web interface. It demonstrates a production-oriented, containerized architecture with a React frontend, a Spring Boot REST API, PostgreSQL metadata storage, and MinIO object storage.
-
-<p align="center">
-  <img src="./backend/src/main/resources/static/CloudNest.png" alt="CloudNest" width="220">
-</p>
 
 ---
 
