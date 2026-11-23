@@ -1,21 +1,44 @@
-# CloudNest
+# CloudNest Backend
 
-A simple file storage project made with Java Spring Boot, PostgreSQL and MinIO.
+The backend is a Java 21 REST API built with Spring Boot 4. It manages authentication, users, folders, file metadata, sharing, and MinIO object storage.
 
-## Run with Docker
+## Responsibilities
 
-Create a `.env` file and set PostgreSQL and MinIO passwords:
+- Spring Security authentication and route protection
+- BCrypt password hashing
+- PostgreSQL persistence through Spring Data JPA
+- Chunked and presigned file uploads
+- Presigned downloads
+- File and folder authorization
+- File sharing and expiration
+- Health and metrics exposure through Actuator
 
-```text
-POSTGRES_PASSWORD=change-me
-MINIO_USERNAME=minioadmin
-MINIO_PASSWORD=change-me
-```
+## Technology
 
-Then run:
+- Java 21
+- Spring Boot 4.0.6
+- Spring Security
+- Spring Data JPA
+- PostgreSQL
+- MinIO
+- JUnit 5
+- Mockito
+- Maven
+
+## Run
 
 ```bash
-docker compose up --build
+./mvnw spring-boot:run
 ```
 
-Open `http://localhost:3000`.
+The API runs on `http://localhost:8080`.
+
+## Test
+
+```bash
+./mvnw test
+```
+
+## Docker
+
+The recommended full-stack setup is defined in the repository's [Docker Compose configuration](../docker-compose.yml).
