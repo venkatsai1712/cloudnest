@@ -77,6 +77,8 @@ PostgreSQL         MinIO object storage
 
 The frontend is served by Nginx and proxies `/api` requests to the backend. PostgreSQL stores users, folder structures, file metadata, and sharing relationships. MinIO stores file objects independently from the application database.
 
+For deployments where the frontend and API use different sites, serve both over HTTPS, set `APP_CORS_ALLOWED_ORIGINS` to the frontend's exact origin (scheme and hostname, without a path), and keep the session cookie settings `SESSION_COOKIE_SAME_SITE=none` and `SESSION_COOKIE_SECURE=true`. These settings let the browser send the login session on credentialed API requests.
+
 ## Project Structure
 
 ```text
