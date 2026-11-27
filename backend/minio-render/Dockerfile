@@ -1,4 +1,4 @@
-FROM quay.io/minio/minio:latest
+FROM cgr.dev/chainguard/minio:latest
 
 EXPOSE 10000
 
