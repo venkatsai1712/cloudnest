@@ -79,6 +79,8 @@ The frontend is served by Nginx and proxies `/api` requests to the backend. Post
 
 For deployments where the frontend and API use different sites, serve both over HTTPS, set `APP_CORS_ALLOWED_ORIGINS` to the frontend's exact origin (scheme and hostname, without a path), and keep the session cookie settings `SESSION_COOKIE_SAME_SITE=none` and `SESSION_COOKIE_SECURE=true`. These settings let the browser send the login session on credentialed API requests.
 
+The Vercel deployment uses a same-origin `/api` rewrite to the Render backend. This keeps the session cookie first-party and avoids browser third-party-cookie restrictions. If the backend hostname changes, update `frontend/vercel.json`; ensure Vercel does not override `VITE_API_BASE=/api` with the backend's direct URL.
+
 ## Project Structure
 
 ```text
